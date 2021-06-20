@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="400dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp">
+
+        <ImageView
+            android:scaleType="centerCrop"
+            android:id="@+id/imagem"
+            android:src="@drawable/ic_baseline_image_24"
+            android:layout_width="400dp"
+            android:layout_height="400dp"
+            android:layout_gravity="center_horizontal"
+            ></ImageView>
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:text=""
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        />
+
+    <Button
+        android:layout_marginHorizontal="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="DESCRIBE IMAGE"
+        android:layout_gravity="clip_vertical"
+        android:onClick="describeImage" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="15dp"
+        >
+        <Button
+            android:layout_weight="2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DETECT FACE"
+            android:layout_gravity="clip_vertical"
+
+            android:onClick="detectFace" />
+
+        <Button
+            android:layout_marginLeft="15dp"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DETECT OBJECTS"
+            android:layout_gravity="clip_vertical"
+            android:onClick="detectObjects" />
+
+    </LinearLayout>
+
+</LinearLayout>
